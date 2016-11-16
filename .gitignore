@@ -31,3 +31,4 @@ test/IECoreHoudini/resultsPython.txt
 contrib/IECoreMantra/test/IECoreMantra/results.txt
 contrib/IECoreAppleseed/test/IECoreAppleseed/results.txt
 /.ubuntu
+custom.cache

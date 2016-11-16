@@ -40,12 +40,12 @@
 #include "IECore/Parameterised.h"
 #include "IECore/SimpleTypedParameter.h"
 #include "IECore/VectorTypedParameter.h"
+#include "IECore/FileNameParameter.h"
 
 namespace IECore
 {
 
 IE_CORE_FORWARDDECLARE( DeepImageWriter );
-IE_CORE_FORWARDDECLARE( FileNameParameter );
 
 /// The DeepImageWriter class defines an abstract base class for writing deep images.
 /// As with DeepPixel, DeepImageWriter only supports float channels. DeepImageWriter
