@@ -1,16 +1,27 @@
 import os
+import sys
 import platform
-
 
 # set these variables
 arnold_dir = ""
 depn_dir = ""
 
+for arg in sys.argv[1:]:
+   if arg.startswith("DEPS_DIR="):
+      tmp = arg[len("DEPS_DIR="):]
+      if os.path.isdir(tmp):
+         depn_dir = tmp
+   elif arg.startswith("ARNOLD_DIR="):
+      tmp = arg[len("ARNOLD_DIR="):]
+      if os.path.isdir(tmp):
+         arnold_dir = tmp
 
 if platform.system() == "Linux":
-    platform = "linux"
+    # Linux specific setup
+    pass
 else:
-    platform = "osx"
+    # OSX specific setup (or windows?)
+    pass
 
 # depn dirs
 dep_lib = depn_dir + "/lib"
@@ -66,3 +77,4 @@ WITH_GL = True
 # build dir
 INSTALL_PREFIX = os.path.abspath("dist")
 BUILD_CACHEDIR = os.path.abspath("build")
+
